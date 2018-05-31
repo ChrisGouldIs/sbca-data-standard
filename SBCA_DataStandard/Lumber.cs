@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Newtonsoft.Json;
+
+using SBCA_DataStandard.Enums;
+
 namespace SBCA_DataStandard
 {
     public class Lumber
@@ -20,7 +24,10 @@ namespace SBCA_DataStandard
 
         public string Grade { get; set; }
 
-        public string Species { get; set; }
+        [JsonIgnore]
+        public LumberSpecies SpeciesValue { get; set; }
+
+        public String Species { get { return Utils<LumberSpecies>.GetDescription(SpeciesValue); } set { SpeciesValue = Utils<LumberSpecies>.FromDescription(value); } }
 
         public string TreatmentType { get; set; }
 
