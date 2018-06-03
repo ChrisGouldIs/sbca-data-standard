@@ -154,9 +154,18 @@
           "type": "number"
         },
         "Grade": {
-          "type": [
-            "string",
-            "null"
+          "type": "string",
+          "enum": [
+            "SelectStructuralDense",
+            "SelectStructural",
+            "Number1Dense",
+            "Number1",
+            "Number2",
+            "Number3",
+            "Stud",
+            "Construction",
+            "Standard",
+            "Utility"
           ]
         },
         "Species": {

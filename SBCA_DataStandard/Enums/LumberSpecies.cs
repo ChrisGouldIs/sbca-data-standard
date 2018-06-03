@@ -60,4 +60,18 @@ namespace SBCA_DataStandard.Enums
         YellowCedar,
         YellowPoplar,
     }
+
+    public enum LumberGrade
+    {
+        SelectStructuralDense,
+        SelectStructural,
+        Number1Dense,
+        Number1,
+        Number2,
+        Number3,
+        Stud,
+        Construction,
+        Standard,
+        Utility,
+    }
 }

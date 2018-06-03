@@ -72,6 +72,7 @@ namespace SBCA_DataStandard
         public void SchemaFileMatchesModel()
         {
             var schemaFromModel = SchemaGenerator.Generate(typeof(Component));
+            var schemaJson = schemaFromModel.ToString(); // debug and inspect this variable to copy to Schema.json file in Resources
             var schemaFromFile = JSchema.Parse(Encoding.UTF8.GetString(FileResources.Schema));
 
             Assert.AreEqual(schemaFromModel.ToString(), schemaFromFile.ToString());
