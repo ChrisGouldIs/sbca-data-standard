@@ -9,105 +9,55 @@ namespace SBCA_DataStandard.Enums
 {
     public enum LumberSpecies
     {
-        [Description("AlaskaCedar")]
         AlaskaCedar,
-        [Description("AlaskaHemlock")]
         AlaskaHemlock,
-        [Description("AlaskaSpruce")]
         AlaskaSpruce,
-        [Description("AlaskaYellowCedar")]
         AlaskaYellowCedar,
-        [Description("Aspen")]
         Aspen,
-        [Description("Baldcypress")]
         Baldcypress,
-        [Description("BalsamFir")]
         BalsamFir,
-        [Description("Beech_Birch_Hickory")]
         Beech_Birch_Hickory,
-        [Description("CoastSitkaSpruce")]
         CoastSitkaSpruce,
-        [Description("CoastSpecies")]
         CoastSpecies,
-        [Description("Cottonwood")]
         Cottonwood,
-        [Description("DouglasFir_Larch")]
         DouglasFir_Larch,
-        [Description("DouglasFir_Larch_North")]
         DouglasFir_Larch_North,
-        [Description("DouglasFir_South")]
         DouglasFir_South,
-        [Description("EasternHemlock")]
         EasternHemlock,
-        [Description("EasternHemlock_BalsamFir")]
         EasternHemlock_BalsamFir,
-        [Description("EasternHemlock_Tamarack")]
         EasternHemlock_Tamarack,
-        [Description("EasternHemlock_Tamarack_North")]
         EasternHemlock_Tamarack_North,
-        [Description("EasternSoftwoods")]
         EasternSoftwoods,
-        [Description("EasternSpruce")]
         EasternSpruce,
-        [Description("EasternWhitePine")]
         EasternWhitePine,
-        [Description("EasternWhitePine_North")]
         EasternWhitePine_North,
-        [Description("Hem_Fir")]
         Hem_Fir,
-        [Description("Hem_Fir_North")]
         Hem_Fir_North,
-        [Description("MixedMaple")]
         MixedMaple,
-        [Description("MixedOak")]
         MixedOak,
-        [Description("MixedSouthernPine")]
         MixedSouthernPine,
-        [Description("MountainHemlock")]
         MountainHemlock,
-        [Description("NorthernPine")]
         NorthernPine,
-        [Description("NorthernRedOak")]
         NorthernRedOak,
-        [Description("NorthernSpecies")]
         NorthernSpecies,
-        [Description("NorthernWhiteCedar")]
         NorthernWhiteCedar,
-        [Description("PonderosaPine")]
         PonderosaPine,
-        [Description("RedMaple")]
         RedMaple,
-        [Description("RedOak")]
         RedOak,
-        [Description("RedPine")]
         RedPine,
-        [Description("Redwood")]
         Redwood,
-        [Description("SitkaSpruce")]
         SitkaSpruce,
-        [Description("SouthernPine")]
         SouthernPine,
-        [Description("Spruce_Pine_Fir")]
         Spruce_Pine_Fir,
-        [Description("Spruce_Pine_Fir_South")]
         Spruce_Pine_Fir_South,
-        [Description("WesternCedars")]
         WesternCedars,
-        [Description("WesternCedars_North")]
         WesternCedars_North,
-        [Description("WesternHemlock")]
         WesternHemlock,
-        [Description("WesternHemlock_North")]
         WesternHemlock_North,
-        [Description("WesternWhitePine")]
         WesternWhitePine,
-        [Description("WesternWoods")]
         WesternWoods,
-        [Description("WhiteOak")]
         WhiteOak,
-        [Description("YellowCedar")]
         YellowCedar,
-        [Description("YellowPoplar")]
         YellowPoplar,
     }
 }
