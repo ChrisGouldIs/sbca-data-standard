@@ -22,12 +22,9 @@ namespace SBCA_DataStandard
 
         public double Length { get; set; }
 
-        public string Grade { get; set; }
+        public LumberGrade Grade { get; set; }
 
-        [JsonIgnore]
-        public LumberSpecies SpeciesValue { get; set; }
-
-        public String Species { get { return Utils<LumberSpecies>.GetDescription(SpeciesValue); } set { SpeciesValue = Utils<LumberSpecies>.FromDescription(value); } }
+        public LumberSpecies Species { get; set; }
 
         public string TreatmentType { get; set; }
 
