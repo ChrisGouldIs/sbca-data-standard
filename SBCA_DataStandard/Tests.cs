@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace SBCA_DataStandard
 {
@@ -54,6 +54,25 @@ namespace SBCA_DataStandard
             var reparsedComponent = JsonConvert.DeserializeObject<Component>(jsonOutput, SerializerSettings);
 
             Assert.IsTrue(reparsedComponent != null);
+        }
+
+        [Test]
+        public void Dump_Serialize_Component()
+        {
+            var component = TestModels.TestComponent;
+            var jsonOutput = JsonConvert.SerializeObject(component, Formatting.Indented, new Newtonsoft.Json.Converters.StringEnumConverter());
+
+            try
+            {
+                string outputFile = @".\modeloutput.json";
+                File.WriteAllText(outputFile, jsonOutput);
+
+                Assert.IsTrue(File.Exists(outputFile));
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail("Writing the test model failed! " + ex.Message);
+            }
         }
 
         [Test]

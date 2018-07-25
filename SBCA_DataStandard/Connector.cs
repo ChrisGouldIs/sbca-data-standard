@@ -18,9 +18,9 @@ namespace SBCA_DataStandard
 
         public Guid MaterialGuid { get; set; }
 
-        public double[] Center { get; set; }
+        public Point Center { get; set; }
 
-        public double[] NormalDirection { get; set; }
+        public Vector NormalDirection { get; set; }
 
         /// <summary>
         /// Clockwise angle from the X Axis
