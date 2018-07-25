@@ -13,10 +13,7 @@
           "type": "number"
         },
         "Center": {
-          "type": "array",
-          "items": {
-            "type": "number"
-          }
+          "$ref": "#/definitions/Point3D"
         },
         "BearingType": {
           "type": "string"
@@ -44,16 +41,10 @@
           "type": "string"
         },
         "Center": {
-          "type": "array",
-          "items": {
-            "type": "number"
-          }
+          "$ref": "#/definitions/Point3D"
         },
         "NormalDirection": {
-          "type": "array",
-          "items": {
-            "type": "number"
-          }
+          "$ref": "#/definitions/Vector3D"
         },
         "Angle": {
           "type": "number"
@@ -66,10 +57,7 @@
         "Vertices": {
           "type": "array",
           "items": {
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
+            "$ref": "#/definitions/Point3D"
           }
         },
         "Faces": {
@@ -99,10 +87,7 @@
           "type": "number"
         },
         "Center": {
-          "type": "array",
-          "items": {
-            "type": "number"
-          }
+          "$ref": "#/definitions/Point3D"
         }
       }
     },
@@ -336,10 +321,7 @@
           "$ref": "#/definitions/Geometry"
         },
         "GrainDirection": {
-          "type": "array",
-          "items": {
-            "type": "number"
-          }
+          "$ref": "#/definitions/Vector3D"
         }
       }
     },
@@ -374,6 +356,20 @@
         }
       }
     },
+    "Point3D": {
+      "type": "object",
+      "properties": {
+        "X": {
+          "type": "number"
+        },
+        "Y": {
+          "type": "number"
+        },
+        "Z": {
+          "type": "number"
+        }
+      }
+    },
     "SteelSection": {
       "type": "object",
       "properties": {
@@ -403,6 +399,20 @@
             "RectTube",
             "J_Channel"
           ]
+        }
+      }
+    },
+    "Vector3D": {
+      "type": "object",
+      "properties": {
+        "DX": {
+          "type": "number"
+        },
+        "DY": {
+          "type": "number"
+        },
+        "DZ": {
+          "type": "number"
         }
       }
     }

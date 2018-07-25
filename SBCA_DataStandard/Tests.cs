@@ -64,6 +64,25 @@ namespace SBCA_DataStandard
 
             try
             {
+                string outputFile = @".\componentoutput.json";
+                File.WriteAllText(outputFile, jsonOutput);
+
+                Assert.IsTrue(File.Exists(outputFile));
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail("Writing the test model failed! " + ex.Message);
+            }
+        }
+
+        [Test]
+        public void Dump_Serialize_Model()
+        {
+            var schemaFromModel = SchemaGenerator.Generate(typeof(Component));
+            var jsonOutput = schemaFromModel.ToString();
+
+            try
+            {
                 string outputFile = @".\modeloutput.json";
                 File.WriteAllText(outputFile, jsonOutput);
 
@@ -96,7 +115,9 @@ namespace SBCA_DataStandard
             Assert.AreEqual(component.Members[0].MaterialDescription, "#2 SYP 2x4");
             Assert.AreEqual(component.Members[0].MaterialType, MaterialType.Lumber);
             Assert.AreEqual(component.Members[0].StockLength, 120);
-            Assert.AreEqual(component.Members[0].GrainDirection, new[] { 1.0, 0.0, 0.0 });
+            Assert.AreEqual(component.Members[0].GrainDirection.DX, 1.0);
+            Assert.AreEqual(component.Members[0].GrainDirection.DY, 0.0);
+            Assert.AreEqual(component.Members[0].GrainDirection.DZ, 0.0);
 
         }
 

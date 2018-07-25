@@ -72,20 +72,20 @@ namespace SBCA_DataStandard
                     MaterialDescription = "#2 SYP 2x4",
                     StockLength = 120,
                     MemberType = "BottomChord",
-                    GrainDirection = new Vector ( 1.0, 0.0, 0.0 ),
+                    GrainDirection = new Vector3D ( 1.0, 0.0, 0.0 ),
                     Geometry = new Geometry()
                     {
-                        Vertices = new List<Point> {
-                                      new Point( 96.0, 1.5, 0.0 ),
-                                      new Point( 0.0, 1.5, 0.0 ),
-                                      new Point( 0.0, 1.5, 0.25 ),
-                                      new Point( 9.75, 1.5, 3.5 ),
-                                      new Point( 96.0, 1.5, 3.5 ),
-                                      new Point( 96.0, 0.0, 0.0 ),
-                                      new Point( 0.0, 0.0, 0.0 ),
-                                      new Point( 0.0, 0.0, 0.25 ),
-                                      new Point( 9.75, 0.0, 3.5 ),
-                                      new Point( 96.0, 0.0, 3.5 ),
+                        Vertices = new List<Point3D> {
+                                      new Point3D( 96.0, 1.5, 0.0 ),
+                                      new Point3D( 0.0, 1.5, 0.0 ),
+                                      new Point3D( 0.0, 1.5, 0.25 ),
+                                      new Point3D( 9.75, 1.5, 3.5 ),
+                                      new Point3D( 96.0, 1.5, 3.5 ),
+                                      new Point3D( 96.0, 0.0, 0.0 ),
+                                      new Point3D( 0.0, 0.0, 0.0 ),
+                                      new Point3D( 0.0, 0.0, 0.25 ),
+                                      new Point3D( 9.75, 0.0, 3.5 ),
+                                      new Point3D( 96.0, 0.0, 3.5 ),
                         },
 
                         Faces = new List<List<int>> {
@@ -120,8 +120,8 @@ namespace SBCA_DataStandard
                         MaterialDescription = "AS20 4x4",
                         MaterialGuid = Guid.Parse("92862168-2B8C-42F6-9A68-68EDAABEBC29"),
                         Angle = 0.0,
-                        Center = new Point( 60.0, 3.5, 1.5 ),
-                        NormalDirection = new Vector( 0.0, 0.0, 1.0 ),
+                        Center = new Point3D( 60.0, 3.5, 1.5 ),
+                        NormalDirection = new Vector3D( 0.0, 0.0, 1.0 ),
                                         },
                     new Connector()
                     {
@@ -129,8 +129,8 @@ namespace SBCA_DataStandard
                         MaterialDescription = "AS20 4x4",
                         MaterialGuid = Guid.Parse("92862168-2B8C-42F6-9A68-68EDAABEBC29"),
                         Angle = 0.0,
-                        Center = new Point( 60.0, 3.5, 1.5 ),
-                        NormalDirection = new Vector (0.0, 0.0, -1.0 ),
+                        Center = new Point3D( 60.0, 3.5, 1.5 ),
+                        NormalDirection = new Vector3D (0.0, 0.0, -1.0 ),
                     }
               },
             },
@@ -140,7 +140,7 @@ namespace SBCA_DataStandard
                 new Bearing()
                 {
                     Name = "A",
-                    Center = new Point  (1.75, 0, .75 ),
+                    Center = new Point3D  (1.75, 0, .75 ),
                     Depth = 1.5,
                     Width = 3.5,
                     BearingType = "Double Wall Plate",
@@ -149,7 +149,7 @@ namespace SBCA_DataStandard
                 new Bearing()
                 {
                     Name = "B",
-                    Center = new Point ( 95.25, 0, .75 ),
+                    Center = new Point3D ( 95.25, 0, .75 ),
                     Depth = 1.5,
                     Width = 3.5,
                     BearingType = "Double Wall Plate",
@@ -161,7 +161,7 @@ namespace SBCA_DataStandard
                 new Hanger()
                 {
                     Name = "Hanger 1",
-                    Center = new Point ( 30.0, 0, 1.5 ),
+                    Center = new Point3D ( 30.0, 0, 1.5 ),
                     Depth = 3.5,
                     Width = 3.5,
                     Height = 3.5,
