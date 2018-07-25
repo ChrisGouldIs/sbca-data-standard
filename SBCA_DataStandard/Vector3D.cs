@@ -11,9 +11,9 @@ namespace SBCA_DataStandard
     public class Vector3D
     {
         // Right hand rule, orthogonal vector
-        public double DX { get; set; } = 0.0;
-        public double DY { get; set; } = 0.0;
-        public double DZ { get; set; } = 0.0;
+        public double DX { get; set; }
+        public double DY { get; set; }
+        public double DZ { get; set; }
 
         public Vector3D()
         {
@@ -55,8 +55,8 @@ namespace SBCA_DataStandard
             }
         }
 
-        public static Vector3D XAxis = new Vector3D(1.0, 0.0, 0.0);
-        public static Vector3D YAxis = new Vector3D(0.0, 1.0, 0.0);
-        public static Vector3D ZAxis = new Vector3D(0.0, 0.0, 1.0);
+        public readonly static Vector3D XAxis = new Vector3D(1.0, 0.0, 0.0);
+        public readonly static Vector3D YAxis = new Vector3D(0.0, 1.0, 0.0);
+        public readonly static Vector3D ZAxis = new Vector3D(0.0, 0.0, 1.0);
     }
 }
