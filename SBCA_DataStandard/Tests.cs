@@ -61,10 +61,11 @@ namespace SBCA_DataStandard
         {
             var component = TestModels.TestComponent;
             var jsonOutput = JsonConvert.SerializeObject(component, Formatting.Indented, new Newtonsoft.Json.Converters.StringEnumConverter());
+            var desktopPath = Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory);
 
             try
             {
-                string outputFile = @".\componentoutput.json";
+                string outputFile = $@"{desktopPath}\componentoutput.json";
                 File.WriteAllText(outputFile, jsonOutput);
 
                 Assert.IsTrue(File.Exists(outputFile));
@@ -80,10 +81,11 @@ namespace SBCA_DataStandard
         {
             var schemaFromModel = SchemaGenerator.Generate(typeof(Component));
             var jsonOutput = schemaFromModel.ToString();
+            var desktopPath = Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory);
 
             try
             {
-                string outputFile = @".\modeloutput.json";
+                string outputFile = $@"{desktopPath}\modeloutput.json";
                 File.WriteAllText(outputFile, jsonOutput);
 
                 Assert.IsTrue(File.Exists(outputFile));
